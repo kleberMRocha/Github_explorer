@@ -40,7 +40,9 @@ const Dashboard: React.FC = () => {
   ): Promise<void> {
     event.preventDefault();
     if (!searchValue) {
-      seInputErrors('Por favor, informe um valor válido.');
+      seInputErrors(
+        'Por favor, informe um valor válido. no formato "facebook/react" ',
+      );
       return;
     }
     try {
@@ -49,7 +51,9 @@ const Dashboard: React.FC = () => {
       SetSearchValue('');
       seInputErrors('');
     } catch (error) {
-      seInputErrors(` Reposirótio não encontrado ( ${error.message} ).`);
+      seInputErrors(
+        ` Reposirótio não encontrado formato aceito "facebook/react" ( ${error.message} ).`,
+      );
     }
   }
 
