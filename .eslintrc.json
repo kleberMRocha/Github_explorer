@@ -31,7 +31,7 @@
   "rules": {
     "object-curly-newline": ["error", { "multiline": true, "minProperties": 5 }],
     "camelcase": "off",
-    "prettier/prettier": ["error", {"singleQuote": false}],
+    "prettier/prettier": ["warn", {"singleQuote": false}],
     "no-use-before-define": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
