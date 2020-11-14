@@ -1,5 +1,10 @@
-import styled from 'styled-components';
+/* eslint-disable prettier/prettier */
+import styled, { css } from 'styled-components';
 import { shade } from 'polished';
+
+interface FormProp {
+  hasError: boolean;
+}
 
 export const Title = styled.h1`
   margin-top: 50px;
@@ -9,7 +14,13 @@ export const Title = styled.h1`
   color: #3a3a3a;
 `;
 
-export const Form = styled.form`
+export const Error = styled.div`
+  margin: 10px 20px;
+  color: tomato;
+  font-weight: bold;
+`;
+
+export const Form = styled.form<FormProp>`
   margin-top: 50px;
   max-width: 700px;
   display: flex;
@@ -20,6 +31,12 @@ export const Form = styled.form`
     padding: 0 24px;
     border: 0;
     border-radius: 5px 0 0 5px;
+    border: 2px solid #ffffff;
+    border-right: 0;
+    ${(props) => props.hasError && css`
+        border-color: tomato;
+      `}
+
     &::placeholder {
       color: #a8a8b3;
     }

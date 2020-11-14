@@ -29,6 +29,7 @@
       "prettier"
   ],
   "rules": {
+    "object-curly-newline": ["error", { "multiline": true, "minProperties": 5 }],
     "camelcase": "off",
     "prettier/prettier": "error",
     "no-use-before-define": "off",
